@@ -1,10 +1,16 @@
 import './App.css';
-import NavBar from "./components/NavBar";
+import {ResponsiveDrawerTwo} from "./components/ResponsiveDrawerTwo";
+import { ThemeProvider} from '@mui/material/styles';
+import {overall} from './muiStyleElements';
+import { CssBaseline } from '@mui/material';
 
 function App() {
   return (
-    <div className='App'>
-        <NavBar/>
+    <div>
+        <ThemeProvider theme={overall}>
+            <CssBaseline/>
+            <ResponsiveDrawerTwo/>
+        </ThemeProvider>
     </div>
   );
 }
