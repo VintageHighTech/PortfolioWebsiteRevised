@@ -6,7 +6,7 @@ import navIcon3 from "../assets/image/leetcode_svg.svg";
 export default function SocialIconGroup() {
 
     return(
-        <Stack direction='row' spacing={1} >
+        <Stack direction='row' spacing={1} marginRight={1}>
             <IconButton
                 sx={{marginRight: 1}}
                 href="https://github.com/VintageHighTech"
@@ -18,8 +18,8 @@ export default function SocialIconGroup() {
             >
                 <LinkedInIcon style={{fontSize: 'larger', fill: "#00a4c1"}}/>
             </IconButton>
-            <Button className="social-icon" href="https://leetcode.com/twentyGoToTen/">
-                <img border="7px" src={navIcon3} alt="LC"/>
+            <Button size="small" href="https://leetcode.com/twentyGoToTen/">
+                <img className="social-icon" src={navIcon3} alt="LC"/>
             </Button>
         </Stack>
     );

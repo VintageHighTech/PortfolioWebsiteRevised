@@ -1,31 +1,14 @@
-/***  FONTS  ***/
-
-@font-face {
-  font-family: Centra;
-  src: url('./assets/font/CentraNo2-Bold.ttf');
-  font-weight: 700;
-}
-@font-face {
-  font-family: Centra;
-  src: url('./assets/font/CentraNo2-Medium.ttf');
-  font-weight: 500;
-}
-@font-face {
-  font-family: Centra;
-  src: url('./assets/font/CentraNo2-Book.ttf');
-  font-weight: 400;
-}
 
 body {
   font-weight: 400;
   position: relative;
   background-color: #1f2833 !important;
   color: #00a4c1 !important;
-  font-family: 'Centra', sans-serif !important;
+  font-family: 'Ubuntu', serif !important;
 }
 
 img {
-  width: 100%;
+  /*width: 100%;*/
   height: auto;
 }
 
@@ -34,31 +17,23 @@ img {
   /*color: #00a4c1 !important;*/
 }
 
-.App-header {
-  /*background-color: #282c34;*/
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  /*align-items: center;*/
-  /*justify-content: center;*/
-  font-size: calc(10px + 2vmin);
-  color: red;
-}
+/*.App-header {*/
+/*  !*background-color: #282c34;*!*/
+/*  min-height: 100vh;*/
+/*  display: flex;*/
+/*  flex-direction: column;*/
+/*  !*align-items: center;*!*/
+/*  !*justify-content: center;*!*/
+/*  font-size: calc(10px + 2vmin);*/
+/*  color: red;*/
+/*}*/
 
 .navbarlogo {
   width: 40px;
 }
 
 .social-icon {
-  /*width: 30px;*/
-  width: 60px;
-  /*height: 10px;*/
-  /*background: rgba(217, 217, 217, 0.1);*/
-  /*border-radius: 50%;*/
-
-  /*align-items: center;*/
-  /*justify-content: center;*/
-  /*line-height: 1;*/
+  width: 35px;
 }
 
 

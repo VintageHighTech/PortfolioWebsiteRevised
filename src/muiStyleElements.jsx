@@ -17,14 +17,16 @@ export const overall = createTheme(
             warning: {
                 main: '#9FEDD7'
             },
+            background: '#1f2833'
         },
         typography: {
-            fontFamily: 'Centra',
+            fontFamily: '"Ubuntu", sanserif',
             subtitle1: {
                 fontSize: 12,
             },
             body1: {
-                fontSize: 14,
+                color: "#9FEDD7",
+                fontSize: 18,
             },
         },
         background: {

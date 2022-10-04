@@ -1,4 +1,4 @@
-import {AppBar, Toolbar, IconButton, Button, Stack} from "@mui/material";
+import {AppBar, Toolbar, IconButton, Button, Stack, Container} from "@mui/material";
 import {useState} from "react";
 import Drawer from "@mui/material/Drawer";
 import Box from "@mui/material/Box";
@@ -6,7 +6,6 @@ import Divider from "@mui/material/Divider";
 import MenuIcon from "@mui/icons-material/Menu";
 import logo from "../assets/image/logo-one-image.png";
 import SocialIconGroup from "./SocialIconGroup";
-
 
 export function ResponsiveDrawerTwo() {
     const [mobileOpen, setMobileOpen] = useState(false);
@@ -22,81 +21,88 @@ export function ResponsiveDrawerTwo() {
     }
 
     const largeDrawer = (
-        <Stack direction="row" sx={{justifyContent: "space-between"}}>
-            <Stack direction="row" spacing={2} alignItems="center">
-                <Button href="#home"
-                        onClick={() => onUpdateActiveLink("home")}
-                >
-                    <img className="navbarlogo" src={logo} alt="CS"/>
-                </Button>
+        <Box sx={{marginTop: 1, marginBottom: 1}}>
+            <Stack direction="row" sx={{justifyContent: "space-between"}}>
+                <Stack direction="row" spacing={1} alignItems="center">
+                    <Button href="#home"
+                            onClick={() => onUpdateActiveLink("home")}
+                            sx={{marginLeft:1}}
+                    >
+                        <img className="navbarlogo" src={logo} alt="CS"/>
+                    </Button>
+                    <Button color={activeLink === "home" ? "warning" : "secondary"}
+                            href="#home"
+                            onClick={() => onUpdateActiveLink("home")}
+                    >
+                        Home
+                    </Button>
+                    <Button color={activeLink === "skills" ? "warning" : "secondary"}
+                            href="#skills"
+                            onClick={() => onUpdateActiveLink("skills")}
+                    >
+                        Skills
+                    </Button>
+                    <Button color={activeLink === "projects" ? "warning" : "secondary"}
+                            href="#projects"
+                            onClick={() => onUpdateActiveLink("projects")}
+                    >
+                        Projects
+                    </Button>
+                    <Button color={activeLink === "contact" ? "warning" : "secondary"}
+                            href="#contact"
+                            onClick={() => onUpdateActiveLink("contact")}
+                    >
+                        Contact
+                    </Button>
+                </Stack>
+                <SocialIconGroup />
+            </Stack>
+        </Box>
+    )
+
+    const smallDrawer = (
+        <Container>
+            <div>
+                <Toolbar/>
+                <Divider/>
                 <Button color={activeLink === "home" ? "warning" : "secondary"}
                         href="#home"
                         onClick={() => onUpdateActiveLink("home")}
                 >
-                    Home
+                    HOME
                 </Button>
+                <Divider/>
                 <Button color={activeLink === "skills" ? "warning" : "secondary"}
                         href="#skills"
                         onClick={() => onUpdateActiveLink("skills")}
                 >
-                    Skills
+                    SKILLS
                 </Button>
-                <Button color={activeLink === "projects" ? "warning" : "secondary"}
-                        href="#projects"
+                <Divider/>
+                <Button color={activeLink === "skills" ? "warning" : "secondary"}
+                        href="#skills"
                         onClick={() => onUpdateActiveLink("projects")}
                 >
-                    Projects
+                    PROJECTS
                 </Button>
-                <Button color={activeLink === "contact" ? "warning" : "secondary"}
-                        href="#contact"
+                <Divider/>
+                <Button color={activeLink === "skills" ? "warning" : "secondary"}
+                        href="#skills"
                         onClick={() => onUpdateActiveLink("contact")}
                 >
-                    Contact
+                    CONTACT
                 </Button>
-            </Stack>
-            <SocialIconGroup/>
-        </Stack>
-    )
-
-    const smallDrawer = (
-        <div>
-            <Toolbar/>
-            <Divider/>
-            <Button color={activeLink === "home" ? "warning" : "secondary"}
-                    href="#home"
-                    onClick={() => onUpdateActiveLink("home")}
-            >
-                HOME
-            </Button>
-            <Divider/>
-            <Button color={activeLink === "skills" ? "warning" : "secondary"}
-                    href="#skills"
-                    onClick={() => onUpdateActiveLink("skills")}
-            >
-                SKILLS
-            </Button>
-            <Divider/>
-            <Button color={activeLink === "skills" ? "warning" : "secondary"}
-                    href="#skills"
-                    onClick={() => onUpdateActiveLink("projects")}
-            >
-                PROJECTS
-            </Button>
-            <Divider/>
-            <Button color={activeLink === "skills" ? "warning" : "secondary"}
-                    href="#skills"
-                    onClick={() => onUpdateActiveLink("contact")}
-            >
-                CONTACT
-            </Button>
-            <Divider/>
-            <SocialIconGroup/>
-        </div>
+                <Divider/>
+                <Box sx={{marginTop:1, marginBottom:1}}>
+                    <SocialIconGroup/>
+                </Box>
+            </div>
+        </Container>
     )
 
     return (
-        <Box>
-            <AppBar position="static">
+        <Box sx={{marginTop: 1, marginBottom: 1}}>
+            <AppBar elevation={10}>
                 <Toolbar sx={{justifyContent: "space-between"}}>
                     <Button
                         size="large"
@@ -123,6 +129,7 @@ export function ResponsiveDrawerTwo() {
                             backgroundColor: "#1f2833"
                         }
                     }}
+                    elevation={5}
                     anchor="top"
                     variant="temporary"
                     open={mobileOpen}
