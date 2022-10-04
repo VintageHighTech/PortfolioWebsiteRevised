@@ -1,6 +1,7 @@
 import './App.css';
 import {ResponsiveDrawerTwo} from "./components/ResponsiveDrawerTwo";
 import Banner from "./components/Banner";
+import Skills from "./components/Skills"
 import { ThemeProvider } from '@mui/material/styles';
 import {Box, Container} from '@mui/material';
 import {overall} from './muiStyleElements';
@@ -20,9 +21,8 @@ function App() {
                 {/*    // justifyItems: "center"*/}
 
                 {/*}}>*/}
-
-
-                    <Banner/>
+                <Banner/>
+                <Skills/>
                 {/*</Container>*/}
             </ThemeProvider>
   );

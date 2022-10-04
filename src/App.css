@@ -1,5 +1,12 @@
 
 body {
+  background-image: url('./assets/image/background-one-img.png');
+  background-size: cover;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
   font-weight: 400;
   position: relative;
   background-color: #1f2833 !important;
