@@ -1,7 +1,9 @@
 import './App.css';
 import {ResponsiveDrawerTwo} from "./components/ResponsiveDrawerTwo";
 import Banner from "./components/Banner";
-import Skills from "./components/Skills"
+import Skills from "./components/Skills";
+import Projects from "./components/Projects";
+import Contact from "./components/Contact";
 import { ThemeProvider } from '@mui/material/styles';
 import {Box, Container} from '@mui/material';
 import {overall} from './muiStyleElements';
@@ -23,6 +25,8 @@ function App() {
                 {/*}}>*/}
                 <Banner/>
                 <Skills/>
+                <Projects/>
+                <Contact/>
                 {/*</Container>*/}
             </ThemeProvider>
   );

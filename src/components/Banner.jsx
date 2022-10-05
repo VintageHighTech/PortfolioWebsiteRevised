@@ -7,6 +7,7 @@ export default function Banner() {
         <Paper id="home" elevation={0} sx={{
             color: "inherit",
             padding: "5%",
+            paddingBottom:"10%"
         }}>
             <Box maxWidth="1100px">
                 <Grid container columnSpacing={{xs: 2}} marginTop={12} justifyContent="space-between">

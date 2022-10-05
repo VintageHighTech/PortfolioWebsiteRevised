@@ -79,15 +79,15 @@ export function ResponsiveDrawerTwo() {
                     SKILLS
                 </Button>
                 <Divider/>
-                <Button color={activeLink === "skills" ? "warning" : "secondary"}
-                        href="#skills"
+                <Button color={activeLink === "projects" ? "warning" : "secondary"}
+                        href="#projects"
                         onClick={() => onUpdateActiveLink("projects")}
                 >
                     PROJECTS
                 </Button>
                 <Divider/>
-                <Button color={activeLink === "skills" ? "warning" : "secondary"}
-                        href="#skills"
+                <Button color={activeLink === "contact" ? "warning" : "secondary"}
+                        href="#contact"
                         onClick={() => onUpdateActiveLink("contact")}
                 >
                     CONTACT
