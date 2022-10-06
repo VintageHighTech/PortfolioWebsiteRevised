@@ -4,6 +4,7 @@ import Banner from "./components/Banner";
 import Skills from "./components/Skills";
 import Projects from "./components/Projects";
 import Contact from "./components/Contact";
+import Footer from "./components/Footer"
 import { ThemeProvider } from '@mui/material/styles';
 import {Box, Container} from '@mui/material';
 import {overall} from './muiStyleElements';
@@ -14,20 +15,11 @@ function App() {
             <ThemeProvider theme={overall}>
                 <CssBaseline/>
                 <ResponsiveDrawerTwo/>
-                {/*<Container*/}
-                {/*    sx={{*/}
-                {/*    // width: "90%",*/}
-                {/*    // marginLeft: "5%",*/}
-                {/*    // alignItems: "center",*/}
-                {/*    // justifyContent: "center",*/}
-                {/*    // justifyItems: "center"*/}
-
-                {/*}}>*/}
                 <Banner/>
                 <Skills/>
                 <Projects/>
                 <Contact/>
-                {/*</Container>*/}
+                <Footer/>
             </ThemeProvider>
   );
 }

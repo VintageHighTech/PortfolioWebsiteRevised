@@ -1,9 +1,5 @@
 import { createTheme } from '@mui/material/styles';
 
-/*
-background: #1f2833
-
- */
 export const overall = createTheme(
     {
         palette: {
@@ -16,11 +12,15 @@ export const overall = createTheme(
             warning: {
                 main: '#ff652f'
             },
+            danger: {
+                main: '#ff652f'
+            },
             background: '#1f2833'
         },
         typography: {
             fontFamily: '"Ubuntu", sanserif',
             h1: {
+                color: "#00a4c1",
                 fontSize: 36,
                 fontWeight: 700,
                 lineHeight: 1
@@ -51,7 +51,6 @@ export const overall = createTheme(
                 fontSize: 15,
                 fontWeight: 300
             },
-
         },
         background: {
             default: '#1f2833'
@@ -59,6 +58,3 @@ export const overall = createTheme(
     }
 )
 
-export const menuButtonTheme = createTheme(
-
-)

@@ -83,10 +83,11 @@ export default function ContactForm() {
 
     return (
         <Box component="form" ref={form} onSubmit={handleSubmit}>
-            <Grid container>
-                <Grid item sm={6}>
+            <Grid container spacing="10px" margin="auto">
+                <Grid item xs={12} sm={6}>
                     {/*<StyledTextField label="First Name" name="first_name"/>*/}
                     <TextField sx={style}
+                               fullWidth={true}
                                variant="outlined"
                                name="first_name"
                                label="First Name"
@@ -95,8 +96,9 @@ export default function ContactForm() {
                                onChange={(e) => onFormUpdate('first_name', e.target.value)}
                     />
                 </Grid>
-                <Grid item sm={6}>
+                <Grid item xs={12} sm={6}>
                     <TextField sx={style}
+                               fullWidth={true}
                                variant="outlined"
                                name="last_name"
                                label="Last Name"
@@ -105,8 +107,9 @@ export default function ContactForm() {
                                onChange={(e) => onFormUpdate('last_name', e.target.value)}
                     />
                 </Grid>
-                <Grid item sm={6}>
+                <Grid item xs={12} sm={6}>
                     <TextField sx={style}
+                               fullWidth={true}
                                variant="outlined"
                                name="email"
                                label="Email"
@@ -115,8 +118,9 @@ export default function ContactForm() {
                                onChange={(e) => onFormUpdate('email', e.target.value)}
                     />
                 </Grid>
-                <Grid item sm={6}>
+                <Grid item xs={12} sm={6}>
                     <TextField sx={style}
+                               fullWidth={true}
                                variant="outlined"
                                name="phone"
                                label="Phone Number"
@@ -125,8 +129,9 @@ export default function ContactForm() {
                                onChange={(e) => onFormUpdate('phone', e.target.value)}
                     />
                 </Grid>
-                <Grid item sm={12}>
+                <Grid item xs={12}>
                     <TextField sx={style}
+                               fullWidth={true}
                                variant="outlined"
                                name="message"
                                label="Message"
@@ -136,19 +141,15 @@ export default function ContactForm() {
                                placeholder="Message"
                                onChange={(e) => onFormUpdate('message', e.target.value)}
                     />
-                                    {/*<textarea*/}
-                                    {/*    name="message"*/}
-                                    {/*    value={formDetails.message} placeholder="Message"*/}
-                                    {/*    onChange={(e) => onFormUpdate('message', e.target.value)}/>*/}
                 </Grid>
-                <Grid>
-                    <Button type="submit" color="secondary">{buttonText}</Button>
+                <Grid item>
+                    <Button size="large" type="submit" color="secondary" variant="contained">{buttonText}</Button>
                 </Grid>
-                <Grid>
+                <Grid item xs={8}>
                     {
                         status.message &&
                         <div>
-                            <Typography color={status.success === false ? "danger" : "success"}>
+                            <Typography color={status.success === false ? "#ff652f" : "#9fedd7"}>
                                 {status.message}
                             </Typography>
                         </div>

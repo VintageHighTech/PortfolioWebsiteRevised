@@ -18,7 +18,7 @@ export default function Banner() {
                         <Typography variant="h1" color="secondary">
                             Software Developer
                         </Typography>
-                        <Typography variant="body1" color="warning" marginTop="7%" marginBottom="5%">
+                        <Typography variant="body1" marginTop="7%" marginBottom="5%">
                             Currently studying all aspects of software development, focussing on
                             web applications built using Java, Spring & React.js. After studying
                             part-time whilst working full-time as a Design Engineer, I recently
