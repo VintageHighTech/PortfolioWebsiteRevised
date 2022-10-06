@@ -83,7 +83,7 @@ export default function ContactForm() {
 
     return (
         <Box component="form" ref={form} onSubmit={handleSubmit}>
-            <Grid container spacing="10px" margin="auto">
+            <Grid container spacing={2} >
                 <Grid item xs={12} sm={6}>
                     {/*<StyledTextField label="First Name" name="first_name"/>*/}
                     <TextField sx={style}
@@ -149,7 +149,7 @@ export default function ContactForm() {
                     {
                         status.message &&
                         <div>
-                            <Typography color={status.success === false ? "#ff652f" : "#9fedd7"}>
+                            <Typography variant="body2" color={status.success === false ? "#ff652f" : "#9fedd7"}>
                                 {status.message}
                             </Typography>
                         </div>

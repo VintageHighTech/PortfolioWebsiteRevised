@@ -3,7 +3,7 @@ import {Box, Typography, Stack, Button} from "@mui/material";
 export default function ProjectCard(props) {
     return (
         <Box width="auto"
-             maxWidth="400px"
+             maxWidth="370px"
              height="auto"
              marginTop="7%"
              padding="7%"

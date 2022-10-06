@@ -6,12 +6,12 @@ export default function Banner() {
     return (
         <Paper id="home" elevation={0} sx={{
             color: "inherit",
-            padding: "5%",
-            paddingBottom:"10%"
+            padding: "7%",
+            paddingBottom:"10%",
         }}>
             <Box maxWidth="1100px">
-                <Grid container columnSpacing={{xs: 2}} marginTop={12} justifyContent="space-between">
-                    <Grid item xs={12} sm={6}>
+                <Grid container columnSpacing={{xs: 2}} marginTop={12} >
+                    <Grid item xs={12} sm={6} margin="auto">
                         <Typography variant="h1" marginBottom="2%">
                             Chris Stephenson
                         </Typography>
@@ -26,7 +26,7 @@ export default function Banner() {
                             in software development.
                         </Typography>
                     </Grid>
-                    <Grid item xs={10} sm={5} md={4} margin="auto">
+                    <Grid item xs={12} sm={5} md={5} margin="auto">
                         <img src={BannerImage}
                              style={{width: "100%"}}
                              alt="Image1"

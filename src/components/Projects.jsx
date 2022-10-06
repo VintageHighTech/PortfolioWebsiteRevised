@@ -1,7 +1,8 @@
-import {Grid, Typography, Paper} from "@mui/material";
+import {Grid, Typography, Paper, Divider} from "@mui/material";
 import projImg1 from "../assets/image/Connect4-img.png";
 import projImg2 from "../assets/image/Project2-img.png";
 import projImg3 from "../assets/image/Project3-img.png";
+import TailoredDivider from "./TailoredDivider";
 
 import ProjectCard from "./ProjectCard";
 
@@ -33,35 +34,40 @@ export default function Projects() {
         }
     ]
 
-
     return (
-        <Paper id="projects" elevation={0} sx={{
-            justifyContent: "center",
-            // alignContent: "center",
-            // backgroundColor: "#1f2833",
-            color: "inherit",
-            paddingLeft: "10%",
-            paddingRight: "10%",
-            paddingTop: "40px",
-            paddingBottom: "3%",
-            textAlign: "center"
-        }}>
-            <Typography variant="h1" color="secondary">Projects</Typography>
-            <dl/>
-            <Grid container columnSpacing={{xs: 4}} paddingTop="2%" justifyContent="center">
-                {
-                    projects.map((project,index) => {
-                        return (
-                            <Grid item key={index} xs={10} sm={4}>
-                            <ProjectCard
+        <div id="projects">
+            <br/> <br/> <br/>
+            <Paper elevation={0} sx={{
+                justifyContent: "center",
+                color: "inherit",
+                paddingLeft: "5%",
+                paddingRight: "5%",
+                paddingTop: "40px",
+                paddingBottom: "3%",
+                textAlign: "center"
+            }}>
+                <TailoredDivider color="#00a4c1" title="Projects"/>
+                <dl/>
+                <Grid container
+                      columnSpacing={{xs: 4}}
+                      paddingTop="2%"
+                      justifyContent="center"
+                      marginTop="20px"
+                >
+                    {
+                        projects.map((project, index) => {
+                            return (
+                                <Grid item key={index} xs={10} sm={4}>
+                                    <ProjectCard
 
-                                {...project}
-                            />
-                            </Grid>
-                        )
-                    })
-                }
-            </Grid>
-        </Paper>
+                                        {...project}
+                                    />
+                                </Grid>
+                            )
+                        })
+                    }
+                </Grid>
+            </Paper>
+        </div>
     )
 }

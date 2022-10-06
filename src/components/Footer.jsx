@@ -1,4 +1,4 @@
-import {AppBar, Toolbar, IconButton, Button, Stack, Container, Link, Typography} from "@mui/material";
+import {AppBar, Toolbar, Grid, Button, Stack, Container, Link, Typography} from "@mui/material";
 import {useState} from "react";
 import Box from "@mui/material/Box";
 import logo from "../assets/image/logo-one-image.png";
@@ -12,10 +12,8 @@ export default function Footer() {
     }
 
     return (
-        <Box sx={{marginTop: 1, marginBottom: 1}} sx={{
-            display: {xs: "block"},
-        }}>
-            <AppBar elevation={10} position="bottom">
+        <Box sx={{marginTop: 1, display: {xs: "block"}}} >
+            <AppBar elevation={10} position="static" sx={{ top:"auto", bottom: 0 }}>
                 <Stack justifyContent="center">
                     <Toolbar sx={{justifyContent: "space-between"}}>
                         <Button
@@ -28,15 +26,14 @@ export default function Footer() {
                         </Button>
                         <SocialIconGroup/>
                     </Toolbar>
-                    <Box justifyContent="center" paddingBottom="20px" paddingLeft="25px">
+                    <Box justifyContent="center" paddingBottom="20px" paddingLeft="25px"  marginTop="5px">
                         <Link href="mailto:chris.stephenson@vintagehightech.co.uk"
-                              // margin="10px"
                             color="secondary"
-                              variant="body1"
+                              variant="body2"
                               underline="hover">
-                            {'chris.stephenson@vintagehightech.co.uk'}
+                            {'Email Chris Stephenson'}
                         </Link>
-                        <Typography
+                        <Typography marginTop="3px"
                                     color="#00a4c1"
                                     variant="body2">
                             Copyright 2022. All rights reserved.

@@ -37,13 +37,13 @@ export const overall = createTheme(
                 lineHeight: 1
             },
             subtitle2: {
-                fontSize: 22,
+                fontSize: 20,
                 fontWeight: 700,
                 lineHeight: 1
             },
             body1: {
                 color: "#fef9c7",
-                fontSize: 17,
+                fontSize: 22,
                 fontWeight: 300
             },
             body2: {
@@ -54,6 +54,9 @@ export const overall = createTheme(
         },
         background: {
             default: '#1f2833'
+        },
+        MuiDivider: {
+            color: '#1f2833'
         }
     }
 )

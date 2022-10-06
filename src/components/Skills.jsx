@@ -1,11 +1,12 @@
 import React from 'react';
-import {Box, Grid, Typography, Paper, Stack} from "@mui/material";
+import {Box, Grid, Typography, Paper, Stack, Divider} from "@mui/material";
 import JavaImage from "../assets/image/java-4-logo-svgrepo-com.svg";
 import SpringImage from "../assets/image/spring-icon-svgrepo-com.svg";
 import ReactImage from "../assets/image/react-svgrepo-com.svg"
 import DockerImage from "../assets/image/docker-logo-svgrepo-com.svg"
 import AwsImage from "../assets/image/aws-svgrepo-com.svg"
 import PostgresImage from "../assets/image/pgsql-svgrepo-com.svg";
+import TailoredDivider from "./TailoredDivider";
 
 export default function Skills() {
 
@@ -14,10 +15,10 @@ export default function Skills() {
             <Box width="100%"
                  maxWidth="200px"
                  height="auto"
-                 marginTop="20px"
+                 marginTop="25px"
                  paddingLeft="7%"
                  paddingRight="7%"
-                 paddingTop="12%"
+                 paddingTop="25px"
                  sx={{
                      backgroundColor: "#1f2833",
                      borderRadius: "15px"
@@ -37,39 +38,42 @@ export default function Skills() {
 
 
     return (
-        <Paper id="skills" elevation={0} sx={{
-            justifyContent: "center",
-            backgroundColor: "#00a4c1",
-            color: "inherit",
-            paddingLeft: "10%",
-            paddingRight: "10%",
-            paddingTop: "20px",
-            paddingBottom: "5%",
-            textAlign: "center"
-        }}>
-            <Typography variant="h2">Areas of Study</Typography>
-            <dl/>
-            <Grid container columnSpacing={{xs: 4}} paddingTop="2%">
-                <Grid item xs={6} sm={3} md={2}>
-                    <SkillCard image={JavaImage} title="Java"/>
+        <div id="skills">
+            <br/> <br/> <br/>
+            <Paper elevation={0} sx={{
+                justifyContent: "center",
+                backgroundColor: "#00a4c1",
+                color: "inherit",
+                paddingLeft: "5%",
+                paddingRight: "5%",
+                paddingTop: "30px",
+                paddingBottom: "5%",
+                textAlign: "center"
+            }}>
+                <TailoredDivider color="#1f2833" title="Areas of Study"/>
+                <dl/>
+                <Grid container columnSpacing={{xs: 3}} paddingTop="15px">
+                    <Grid item xs={6} sm={3} md={2}>
+                        <SkillCard image={JavaImage} title="Java"/>
+                    </Grid>
+                    <Grid item xs={6} sm={3} md={2}>
+                        <SkillCard image={SpringImage} title="Spring"/>
+                    </Grid>
+                    <Grid item xs={6} sm={3} md={2}>
+                        <SkillCard image={ReactImage} title="ReactJS"/>
+                    </Grid>
+                    <Grid item xs={6} sm={3} md={2}>
+                        <SkillCard image={DockerImage} title="Docker"/>
+                    </Grid>
+                    <Grid item xs={6} sm={3} md={2}>
+                        <SkillCard image={AwsImage} title="AWS"/>
+                    </Grid>
+                    <Grid item xs={6} sm={3} md={2}>
+                        <SkillCard image={PostgresImage} title="PostgreSQL"/>
+                    </Grid>
                 </Grid>
-                <Grid item xs={6} sm={3} md={2}>
-                    <SkillCard image={SpringImage} title="Spring"/>
-                </Grid>
-                <Grid item xs={6} sm={3} md={2}>
-                    <SkillCard image={ReactImage} title="ReactJS"/>
-                </Grid>
-                <Grid item xs={6} sm={3} md={2}>
-                    <SkillCard image={DockerImage} title="Docker"/>
-                </Grid>
-                <Grid item xs={6} sm={3} md={2}>
-                    <SkillCard image={AwsImage} title="AWS"/>
-                </Grid>
-                <Grid item xs={6} sm={3} md={2}>
-                    <SkillCard image={PostgresImage} title="PostgreSQL"/>
-                </Grid>
-            </Grid>
-        </Paper>
+            </Paper>
+        </div>
     )
 }
 /*
