@@ -1,6 +1,4 @@
 import {Box, Grid, Typography, Paper, Button, TextField, createTheme} from "@mui/material";
-import {styled} from "@mui/material/styles";
-// import { KeyboardDatePicker, MuiPickerUtilsProvider } from '@mui/utils/'
 import React, {useState, useRef} from 'react';
 import emailjs from "@emailjs/browser";
 
@@ -127,11 +125,21 @@ export default function ContactForm() {
                                onChange={(e) => onFormUpdate('phone', e.target.value)}
                     />
                 </Grid>
-                <Grid item sm={6}>
-                                    <textarea
-                                        name="message"
-                                        value={formDetails.message} placeholder="Message"
-                                        onChange={(e) => onFormUpdate('message', e.target.value)}/>
+                <Grid item sm={12}>
+                    <TextField sx={style}
+                               variant="outlined"
+                               name="message"
+                               label="Message"
+                               multiline
+                               rows={2}
+                               value={formDetails.message}
+                               placeholder="Message"
+                               onChange={(e) => onFormUpdate('message', e.target.value)}
+                    />
+                                    {/*<textarea*/}
+                                    {/*    name="message"*/}
+                                    {/*    value={formDetails.message} placeholder="Message"*/}
+                                    {/*    onChange={(e) => onFormUpdate('message', e.target.value)}/>*/}
                 </Grid>
                 <Grid>
                     <Button type="submit" color="secondary">{buttonText}</Button>
