@@ -1,5 +1,4 @@
-import React from 'react';
-import {Box, Grid, Typography, Paper, Stack, Divider} from "@mui/material";
+import {Box, Grid, Typography, Paper, Stack} from "@mui/material";
 import JavaImage from "../assets/image/java-4-logo-svgrepo-com.svg";
 import SpringImage from "../assets/image/spring-icon-svgrepo-com.svg";
 import ReactImage from "../assets/image/react-svgrepo-com.svg"
@@ -10,7 +9,7 @@ import TailoredDivider from "./TailoredDivider";
 
 export default function Skills() {
 
-    function SkillCard(props) {
+    function SkillCard({image, title}) {
         return (
             <Box width="100%"
                  maxWidth="200px"
@@ -25,21 +24,46 @@ export default function Skills() {
                  }}
             >
                 <Stack paddingBottom={2}>
-                    <img src={props.image}
-                        // style={{height: "70%"}}
+                    <img src={image}
                          alt="Image1"/>
                     <Typography marginTop="2%">
-                        {props.title}
+                        {title}
                     </Typography>
                 </Stack>
             </Box>
         )
     }
 
+    const skills = [
+        {
+            title: "Java",
+            image: JavaImage
+        },
+        {
+            title: "Spring",
+            image: SpringImage
+        },
+        {
+            title: "React",
+            image: ReactImage
+        },
+        {
+            title: "Docker",
+            image: DockerImage
+        },
+        {
+            title: "AWS",
+            image: AwsImage
+        },
+        {
+            title: "Postgres",
+            image: PostgresImage
+        },
+    ]
 
     return (
         <div id="skills">
-            <br/> <br/> <br/>
+            <br/> <br/>
             <Paper elevation={0} sx={{
                 justifyContent: "center",
                 backgroundColor: "#00a4c1",
@@ -47,41 +71,21 @@ export default function Skills() {
                 paddingLeft: "5%",
                 paddingRight: "5%",
                 paddingTop: "30px",
-                paddingBottom: "5%",
-                textAlign: "center"
+                paddingBottom: "50px",
+                textAlign: "center",
+                borderRadius: "25px"
             }}>
-                <TailoredDivider color="#1f2833" title="Areas of Study"/>
-                <dl/>
+                <TailoredDivider color="#1f2833" title="Skills"/>
                 <Grid container columnSpacing={{xs: 3}} paddingTop="15px">
-                    <Grid item xs={6} sm={3} md={2}>
-                        <SkillCard image={JavaImage} title="Java"/>
-                    </Grid>
-                    <Grid item xs={6} sm={3} md={2}>
-                        <SkillCard image={SpringImage} title="Spring"/>
-                    </Grid>
-                    <Grid item xs={6} sm={3} md={2}>
-                        <SkillCard image={ReactImage} title="ReactJS"/>
-                    </Grid>
-                    <Grid item xs={6} sm={3} md={2}>
-                        <SkillCard image={DockerImage} title="Docker"/>
-                    </Grid>
-                    <Grid item xs={6} sm={3} md={2}>
-                        <SkillCard image={AwsImage} title="AWS"/>
-                    </Grid>
-                    <Grid item xs={6} sm={3} md={2}>
-                        <SkillCard image={PostgresImage} title="PostgreSQL"/>
-                    </Grid>
+                    {skills.map((prop) => {
+                        return (
+                            <Grid key={prop.title} item xs={6} sm={3} md={2}>
+                                <SkillCard image={prop.image} title={prop.title}/>
+                            </Grid>
+                        )
+                    })}
                 </Grid>
             </Paper>
         </div>
-    )
+    );
 }
-/*
-Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim ve
-                niam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea c
-                ommodo consequat. Duis aute irure dolor in reprehenderit in voluptate
-                velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
-                occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-                mollit anim id est laborum.
- */

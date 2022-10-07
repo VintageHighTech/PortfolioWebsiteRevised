@@ -15,18 +15,21 @@ export const overall = createTheme(
             danger: {
                 main: '#ff652f'
             },
+            action: {
+                disabled: '#626870'
+            },
             background: '#1f2833'
         },
         typography: {
             fontFamily: '"Ubuntu", sanserif',
             h1: {
                 color: "#00a4c1",
-                fontSize: 36,
+                fontSize: 42,
                 fontWeight: 700,
                 lineHeight: 1
             },
             h2: {
-                color: "#1f2833",
+                color: "#00a4c1",
                 fontSize: 36,
                 fontWeight: 700,
                 lineHeight: 1
@@ -44,20 +47,18 @@ export const overall = createTheme(
             body1: {
                 color: "#fef9c7",
                 fontSize: 22,
-                fontWeight: 300
+                fontWeight: 300,
             },
             body2: {
                 color: "#fef9c7",
-                fontSize: 15,
-                fontWeight: 300
+                fontSize: 16,
+                fontWeight: 300,
+                lineHeight: 1.5
             },
         },
         background: {
             default: '#1f2833'
         },
-        MuiDivider: {
-            color: '#1f2833'
-        }
     }
 )
 

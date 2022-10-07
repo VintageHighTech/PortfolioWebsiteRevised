@@ -7,7 +7,7 @@ export default function Contact() {
 
     return (
         <div id="contact">
-            <br/> <br/> <br/>
+            <br/> <br/><br/>
             <Paper elevation={0} sx={{
                 paddingLeft: "5%",
                 paddingRight: "5%",
@@ -30,5 +30,5 @@ export default function Contact() {
                 </Box>
             </Paper>
         </div>
-    )
+    );
 }

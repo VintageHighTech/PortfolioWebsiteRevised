@@ -1,15 +1,13 @@
-import {AppBar, Toolbar, Grid, Button, Stack, Container, Link, Typography} from "@mui/material";
-import {useState} from "react";
+import {AppBar, Toolbar, Button, Stack, Link, Typography} from "@mui/material";
 import Box from "@mui/material/Box";
 import logo from "../assets/image/logo-one-image.png";
 import SocialIconGroup from "./SocialIconGroup";
 
-export default function Footer() {
-    const [activeLink, setActiveLink] = useState("home");
+export default function Footer({handleActiveLink}) {
 
     function onUpdateActiveLink(value) {
-        setActiveLink(value)
-    }
+        handleActiveLink(value)
+    };
 
     return (
         <Box sx={{marginTop: 1, display: {xs: "block"}}} >
@@ -43,5 +41,5 @@ export default function Footer() {
                 </Stack>
             </AppBar>
         </Box>
-    )
+    );
 }

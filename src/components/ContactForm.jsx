@@ -1,7 +1,6 @@
-import {Box, Grid, Typography, Paper, Button, TextField, createTheme} from "@mui/material";
 import React, {useState, useRef} from 'react';
+import {Box, Grid, Typography, Button, TextField} from "@mui/material";
 import emailjs from "@emailjs/browser";
-
 
 export default function ContactForm() {
 
@@ -28,6 +27,9 @@ export default function ContactForm() {
         }
     };
 
+    /*Haven't used the below for textfields. There's an issue with typing in the textfield when
+        mapping the fields using the styledTextField component.
+     */
     const StyledTextField = (props) => {
         return (
             <TextField
@@ -41,8 +43,7 @@ export default function ContactForm() {
                 onChange={(e) => onFormUpdate('first_name', e.target.value)}
             />
         )
-    }
-
+    };
 
     const formInitialDetails = {
         first_name: '',
@@ -50,7 +51,7 @@ export default function ContactForm() {
         email: '',
         phone: '',
         message: ''
-    }
+    };
 
     const [formDetails, setFormDetails] = useState(formInitialDetails);
     const [buttonText, setButtonText] = useState('Send');
@@ -61,7 +62,7 @@ export default function ContactForm() {
             ...formDetails,
             [category]: value
         })
-    }
+    };
 
     const form = useRef();
 
@@ -79,13 +80,12 @@ export default function ContactForm() {
             });
         setButtonText("Send");
         setFormDetails(formInitialDetails);
-    }
+    };
 
     return (
         <Box component="form" ref={form} onSubmit={handleSubmit}>
             <Grid container spacing={2} >
                 <Grid item xs={12} sm={6}>
-                    {/*<StyledTextField label="First Name" name="first_name"/>*/}
                     <TextField sx={style}
                                fullWidth={true}
                                variant="outlined"
@@ -158,6 +158,4 @@ export default function ContactForm() {
             </Grid>
         </Box>
     );
-
-
 }

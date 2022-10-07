@@ -1,6 +1,6 @@
 import {Box, Typography, Stack, Button} from "@mui/material";
 
-export default function ProjectCard(props) {
+export default function ProjectCard({title, description, image, webUrl, gitUrl, linkButton, active}) {
     return (
         <Box width="auto"
              maxWidth="370px"
@@ -8,24 +8,24 @@ export default function ProjectCard(props) {
              marginTop="7%"
              padding="7%"
              sx={{
-                 backgroundColor: "#182028 ",
-                 borderRadius: "15px"
+                 backgroundColor: "#151C24",
+                 borderRadius: "25px"
              }}
         >
             <Stack spacing={1}>
-                <img src={props.image}
-                     alt="Image1"/>
-                <Typography variant="subtitle2" paddingTop="1%">
-                    {props.title}
+                <img src={image}
+                     alt="Image"/>
+                <Typography variant="subtitle2" paddingTop="2%">
+                    {title}
                 </Typography>
-                <Typography variant="body2" paddingBottom="2%">
-                    {props.description}
+                <Typography variant="body2" paddingTop="2%" paddingBottom="4%">
+                    {description}
                 </Typography>
-                <Stack spacing={1}>
-                    <Button color="secondary" variant="outlined" href={props.webUrl}>WEB APP</Button>
-                    <Button color="secondary" variant="outlined" href={props.gitUrl}>GIT HUB</Button>
+                <Stack spacing={1.5}>
+                    <Button disabled={!active} color="secondary" variant="outlined" href={webUrl}>{linkButton}</Button>
+                    <Button disabled={!active} color="secondary" variant="outlined" href={gitUrl}>GIT HUB</Button>
                 </Stack>
             </Stack>
         </Box>
     )
-}
+};

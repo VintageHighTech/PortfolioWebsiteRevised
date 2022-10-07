@@ -1,24 +1,23 @@
-import {AppBar, Toolbar, IconButton, Button, Stack, Container} from "@mui/material";
 import {useState} from "react";
-import Drawer from "@mui/material/Drawer";
-import Box from "@mui/material/Box";
-import Divider from "@mui/material/Divider";
+import React from "react";
+import {AppBar, Toolbar, IconButton, Button, Stack, Container, Box, Divider, Drawer} from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
 import logo from "../assets/image/logo-one-image.png";
 import SocialIconGroup from "./SocialIconGroup";
 
-export function ResponsiveDrawerTwo() {
+export default function NavBar({handleActiveLink, activeLink}) {
     const [mobileOpen, setMobileOpen] = useState(false);
-    const [activeLink, setActiveLink] = useState("home");
 
     const handleDrawerToggle = () => {
         setMobileOpen(!mobileOpen);
-    }
+    };
 
     function onUpdateActiveLink(value) {
-        setActiveLink(value)
+        handleActiveLink(value)
         setMobileOpen(false);
     }
+
+    const links = ["home", "skills", "projects", "contact"]
 
     const largeDrawer = (
         <Box sx={{marginTop: 1, marginBottom: 1}}>
@@ -26,79 +25,54 @@ export function ResponsiveDrawerTwo() {
                 <Stack direction="row" spacing={1} alignItems="center">
                     <Button href="#home"
                             onClick={() => onUpdateActiveLink("home")}
-                            sx={{marginLeft:1}}
+                            sx={{marginLeft: 1}}
                     >
                         <img className="navbarlogo" src={logo} alt="CS"/>
                     </Button>
-                    <Button color={activeLink === "home" ? "warning" : "secondary"}
-                            href="#home"
-                            onClick={() => onUpdateActiveLink("home")}
-                    >
-                        Home
-                    </Button>
-                    <Button color={activeLink === "skills" ? "warning" : "secondary"}
-                            href="#skills"
-                            onClick={() => onUpdateActiveLink("skills")}
-                    >
-                        Skills
-                    </Button>
-                    <Button color={activeLink === "projects" ? "warning" : "secondary"}
-                            href="#projects"
-                            onClick={() => onUpdateActiveLink("projects")}
-                    >
-                        Projects
-                    </Button>
-                    <Button color={activeLink === "contact" ? "warning" : "secondary"}
-                            href="#contact"
-                            onClick={() => onUpdateActiveLink("contact")}
-                    >
-                        Contact
-                    </Button>
+                    {
+                        links.map((name) => {
+                            return (
+                                <Button key={name}
+                                        color={activeLink === name ? "warning" : "secondary"}
+                                        href={`#${name}`}
+                                        onClick={() => onUpdateActiveLink(name)}
+                                >
+                                    {name}
+                                </Button>
+                            )
+                        })
+                    }
                 </Stack>
-                <SocialIconGroup />
+                <SocialIconGroup/>
             </Stack>
         </Box>
-    )
+    );
 
     const smallDrawer = (
         <Container>
             <div>
                 <Toolbar/>
-                <Divider/>
-                <Button color={activeLink === "home" ? "warning" : "secondary"}
-                        href="#home"
-                        onClick={() => onUpdateActiveLink("home")}
-                >
-                    HOME
-                </Button>
-                <Divider/>
-                <Button color={activeLink === "skills" ? "warning" : "secondary"}
-                        href="#skills"
-                        onClick={() => onUpdateActiveLink("skills")}
-                >
-                    SKILLS
-                </Button>
-                <Divider/>
-                <Button color={activeLink === "projects" ? "warning" : "secondary"}
-                        href="#projects"
-                        onClick={() => onUpdateActiveLink("projects")}
-                >
-                    PROJECTS
-                </Button>
-                <Divider/>
-                <Button color={activeLink === "contact" ? "warning" : "secondary"}
-                        href="#contact"
-                        onClick={() => onUpdateActiveLink("contact")}
-                >
-                    CONTACT
-                </Button>
-                <Divider/>
-                <Box sx={{marginTop:1, marginBottom:1}}>
+                {
+                    links.map((name, index) => {
+                        return (
+                            <div key={index}>
+                                <Button color={activeLink === name ? "warning" : "secondary"}
+                                        href={`#${name}`}
+                                        onClick={() => onUpdateActiveLink(name)}
+                                >
+                                    {name}
+                                </Button>
+                                <Divider sx={{borderColor: "#626870"}}/>
+                            </div>
+                        )
+                    })
+                }
+                <Box sx={{marginTop: 1, marginBottom: 1}}>
                     <SocialIconGroup/>
                 </Box>
             </div>
         </Container>
-    )
+    );
 
     return (
         <Box sx={{marginTop: 1, marginBottom: 1}}>
@@ -162,5 +136,5 @@ export function ResponsiveDrawerTwo() {
                 </Drawer>
             </Box>
         </Box>
-    )
+    );
 }

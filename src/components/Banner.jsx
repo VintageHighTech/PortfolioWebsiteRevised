@@ -1,5 +1,6 @@
 import {Box, Grid, Typography, Paper} from "@mui/material";
 import BannerImage from '../assets/image/intro-img.png';
+import SocialIconGroup from "./SocialIconGroup";
 
 export default function Banner() {
 
@@ -20,11 +21,13 @@ export default function Banner() {
                         </Typography>
                         <Typography variant="body1" marginTop="7%" marginBottom="5%">
                             Currently studying all aspects of software development, focussing on
-                            web applications built using Java, Spring & React.js. After studying
+                            web applications built using Java, Spring & ReactJS. After studying
                             part-time whilst working full-time as a Design Engineer, I recently
                             decided to study full time and concentrate my efforts on a career
                             in software development.
                         </Typography>
+                        <SocialIconGroup/>
+                        <br/>
                     </Grid>
                     <Grid item xs={12} sm={5} md={5} margin="auto">
                         <img src={BannerImage}
@@ -35,5 +38,5 @@ export default function Banner() {
                 </Grid>
             </Box>
         </Paper>
-    )
+    );
 }
