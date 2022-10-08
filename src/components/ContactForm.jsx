@@ -66,12 +66,14 @@ export default function ContactForm() {
 
     const form = useRef();
 
+    const apikey = `${process.env.REACT_APP_JSMAIL_API_KEY}`;
+
     const handleSubmit = (e) => {
         e.preventDefault();
         console.log("Message sent");
         setButtonText("Sending...");
 
-        emailjs.sendForm('vintagehightech_p1', 'portfolio_a1', form.current, 'pdIIx0n889NuQnoqc')
+        emailjs.sendForm('vintagehightech_p1', 'portfolio_a1', form.current, apikey)
             .then((result) => {
                 setStatus({success: true, message: 'Message sent successfully'});
 
