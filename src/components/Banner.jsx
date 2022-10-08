@@ -3,7 +3,8 @@ import BannerImage from '../assets/image/intro-img.png';
 import SocialIconGroup from "./SocialIconGroup";
 
 export default function Banner() {
-
+    const apikey= `${process.env.REACT_APP_JSMAIL_API_KEY}`
+    console.log(apikey);
     return (
         <Paper id="home" elevation={0} sx={{
             color: "inherit",
@@ -20,11 +21,14 @@ export default function Banner() {
                             Software Developer
                         </Typography>
                         <Typography variant="body1" marginTop="7%" marginBottom="5%">
-                            Currently studying all aspects of software development, focussing on
-                            web applications built using Java, Spring & ReactJS. After studying
-                            part-time whilst working full-time as a Design Engineer, I recently
-                            decided to study full time and concentrate my efforts on a career
-                            in software development.
+                            A highly motivated, self-taught software developer with a
+                            passion for technology, seeking to launch a new career.
+                            Focused on Java and backend development but also developing
+                            frontend web applications using ReactJS. Currently studying
+                            data structures and algorithms using online services such as
+                            StackSkills, Udemy, LeetCode, and others. Over twenty years'
+                            experience working in technical design roles in manufacturing
+                            & engineering industries.
                         </Typography>
                         <SocialIconGroup/>
                         <br/>
@@ -40,3 +44,5 @@ export default function Banner() {
         </Paper>
     );
 }
+
+// A highly motivated self-taught software developer with a passion for technology, seeking to launch a new career. Focused on Java and backend development but also developing frontend web applications using ReactJS. Currently studying data structures and algorithms using online services such as StackSkills, Udemy, LeetCode, and others. Over twenty years of experience working in technical design roles in manufacturing & engineering industries.
