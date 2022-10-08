@@ -20,6 +20,9 @@ jspm_packages/
 /.pnp
 .pnp.js
 
+build
+.env
+
 # Misc
 .DS_Store
 .env.local

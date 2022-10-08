@@ -46,7 +46,7 @@ export const overall = createTheme(
             },
             body1: {
                 color: "#fef9c7",
-                fontSize: 22,
+                fontSize: 20,
                 fontWeight: 300,
             },
             body2: {
