@@ -14,7 +14,9 @@ export default function ProjectCard({title, description, image, webUrl, gitUrl, 
         >
             <Stack spacing={1}>
                 <img src={image}
-                     alt="Image"/>
+                     alt="Image"
+                     width="100%"
+                />
                 <Typography variant="subtitle2" paddingTop="2%">
                     {title}
                 </Typography>

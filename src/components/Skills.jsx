@@ -4,20 +4,25 @@ import SpringImage from "../assets/image/spring-icon-svgrepo-com.svg";
 import ReactImage from "../assets/image/react-svgrepo-com.svg"
 import DockerImage from "../assets/image/docker-logo-svgrepo-com.svg"
 import AwsImage from "../assets/image/aws-svgrepo-com.svg"
-import PostgresImage from "../assets/image/pgsql-svgrepo-com.svg";
+import PostgresImage from "../assets/image/postgresql-svgrepo-com.svg";
+
 import TailoredDivider from "./TailoredDivider";
 
 export default function Skills() {
 
     function SkillCard({image, title}) {
         return (
-            <Box width="100%"
+            <Box display="flex"
+                 width="100%"
                  maxWidth="200px"
-                 height="auto"
-                 marginTop="25px"
-                 paddingLeft="7%"
-                 paddingRight="7%"
-                 paddingTop="25px"
+                 height="90%"
+                 maxHeight="220px"
+                 margin="auto"
+                 marginTop="10%"
+                 padding="10%"
+                 paddingTop="20%"
+                 justifyContent="center"
+                 alignItems="center"
                  sx={{
                      backgroundColor: "#1f2833",
                      borderRadius: "15px"
@@ -25,7 +30,10 @@ export default function Skills() {
             >
                 <Stack paddingBottom={2}>
                     <img src={image}
-                         alt="Image1"/>
+                         alt="Image1"
+                         width="100%"
+                         height="100%"
+                    />
                     <Typography marginTop="2%">
                         {title}
                     </Typography>
@@ -76,7 +84,7 @@ export default function Skills() {
                 borderRadius: "25px"
             }}>
                 <TailoredDivider color="#1f2833" title="Skills"/>
-                <Grid container columnSpacing={{xs: 3}} paddingTop="15px">
+                <Grid container columnSpacing={{xs: 2}} paddingTop="15px">
                     {skills.map((prop) => {
                         return (
                             <Grid key={prop.title} item xs={6} sm={3} md={2}>
