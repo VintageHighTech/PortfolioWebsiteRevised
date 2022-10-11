@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.c5bf6457.css",
-    "main.js": "/static/js/main.127a926b.js",
+    "main.js": "/static/js/main.43cddbd6.js",
     "static/js/787.d9a20797.chunk.js": "/static/js/787.d9a20797.chunk.js",
     "static/media/background-one-img.png": "/static/media/background-one-img.a9b0be7fa9211cce7680.png",
     "static/media/psql-project.png": "/static/media/psql-project.f62f245b0fa8a08c1773.png",
@@ -10,7 +10,7 @@
     "static/media/portfolio-site-project.png": "/static/media/portfolio-site-project.1b3a74968ec310fd9d36.png",
     "static/media/Connect4-img.png": "/static/media/Connect4-img.67c0ddc82def657dcd82.png",
     "static/media/logo-one-image.png": "/static/media/logo-one-image.ab431effe001e4aa9897.png",
-    "static/media/postgresql-svgrepo-com.svg": "/static/media/postgresql-svgrepo-com.eac8091f86bcdbccc8d00159294930c9.svg",
+    "static/media/postgresql-svgrepo-com.svg": "/static/media/postgresql-svgrepo-com.9c9aba4f903d76d88c0c41e6a3ddb596.svg",
     "static/media/docker-logo-svgrepo-com.svg": "/static/media/docker-logo-svgrepo-com.8cf488ef5e5bbcac8ca404e061bf0972.svg",
     "static/media/react-svgrepo-com.svg": "/static/media/react-svgrepo-com.c776c14607f920b203fc6fd76d081e44.svg",
     "static/media/aws-svgrepo-com.svg": "/static/media/aws-svgrepo-com.d1e6a0ddd7cc77316a5548fe17d8fdcf.svg",
@@ -19,11 +19,11 @@
     "static/media/leetcode_svg.svg": "/static/media/leetcode_svg.27b02672a166f1945b60c36f0ecdaf7b.svg",
     "index.html": "/index.html",
     "main.c5bf6457.css.map": "/static/css/main.c5bf6457.css.map",
-    "main.127a926b.js.map": "/static/js/main.127a926b.js.map",
+    "main.43cddbd6.js.map": "/static/js/main.43cddbd6.js.map",
     "787.d9a20797.chunk.js.map": "/static/js/787.d9a20797.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.c5bf6457.css",
-    "static/js/main.127a926b.js"
+    "static/js/main.43cddbd6.js"
   ]
 }

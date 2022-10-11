@@ -48,11 +48,11 @@ export default function Skills() {
             image: JavaImage
         },
         {
-            title: "Spring",
+            title: "Spring Boot",
             image: SpringImage
         },
         {
-            title: "React",
+            title: "ReactJS",
             image: ReactImage
         },
         {
@@ -64,7 +64,7 @@ export default function Skills() {
             image: AwsImage
         },
         {
-            title: "Postgres",
+            title: "PostgreSQL",
             image: PostgresImage
         },
     ]

@@ -11,7 +11,7 @@ export default function Projects() {
     const projects = [
         {
             title: "Connect 4",
-            description: "Includes three difficulty levels. Comprises a Java and Spring " +
+            description: "Includes three difficulty levels. Comprises a Java and Spring Boot " +
                 "backend with a ReactJS and MUI frontend. " +
                 "Containerised using Docker. Deployed to AWS using Elastic Beanstalk. "
                 ,
@@ -33,7 +33,7 @@ export default function Projects() {
         },
         {
             title: "Personnel Database",
-            description: "COMING SOON. Database editor with CRUD operations. Comprises Java and Spring backend, " +
+            description: "COMING SOON. Database editor with CRUD operations. Comprises Java and Spring Boot backend, " +
                 "connected to a PostgreSQL database, with ReactJS and Ant Design frontend. Containerised using Docker. " +
                 "Deployed to AWS using Elastic Beanstalk.",
             image: projImg3,

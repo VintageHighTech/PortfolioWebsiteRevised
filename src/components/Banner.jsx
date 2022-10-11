@@ -21,13 +21,11 @@ export default function Banner() {
                             Software Developer
                         </Typography>
                         <Typography variant="body1" marginTop="7%" marginBottom="5%">
-                            A highly motivated, self-taught software developer with a
-                            passion for technology, seeking to launch a new career.
-                            Focused on Java and backend development but also developing
-                            frontend web applications using ReactJS. Currently studying
-                            data structures and algorithms using online services such as
-                            StackSkills, Udemy, LeetCode, and others. Over twenty years'
-                            experience working in technical design roles in manufacturing
+                            A highly motivated, self-taught software developer with a passion for technology.
+                            Focused on Java and backend development but also keen to develop a strong
+                            understanding of frontend web applications. Currently studying data structures
+                            and algorithms using online services such as StackSkills, Udemy, LeetCode and
+                            others. Over seventeen years' experience in technical design roles in manufacturing
                             & engineering industries.
                         </Typography>
                         <SocialIconGroup/>
@@ -44,5 +42,3 @@ export default function Banner() {
         </Paper>
     );
 }
-
-// A highly motivated self-taught software developer with a passion for technology, seeking to launch a new career. Focused on Java and backend development but also developing frontend web applications using ReactJS. Currently studying data structures and algorithms using online services such as StackSkills, Udemy, LeetCode, and others. Over twenty years of experience working in technical design roles in manufacturing & engineering industries.
