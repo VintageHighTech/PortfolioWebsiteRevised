@@ -8,7 +8,7 @@ export default function SocialIconGroup() {
     return (
         <Stack direction='row' spacing={0} marginRight={0}>
             <IconButton sx={{marginRight: 1}}
-                        href="https://www.linkedin.com/in/christopher-stephenson-b5419a225/"
+                        href="https://www.linkedin.com/in/chris-stephenson-vht"
             >
                 <LinkedInIcon style={{fontSize: 'larger', fill: "#00a4c1"}}/>
             </IconButton>
