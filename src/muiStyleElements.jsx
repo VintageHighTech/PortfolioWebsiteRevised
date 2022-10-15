@@ -45,13 +45,15 @@ export const overall = createTheme(
                 lineHeight: 1
             },
             body1: {
+                fontFamily: '"Montserrat", sanserif',
                 color: "#fef9c7",
-                fontSize: 20,
+                fontSize: 18,
                 fontWeight: 300,
             },
             body2: {
+                fontFamily: '"Montserrat", sanserif',
                 color: "#fef9c7",
-                fontSize: 16,
+                fontSize: 15,
                 fontWeight: 300,
                 lineHeight: 1.5
             },

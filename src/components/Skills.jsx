@@ -87,7 +87,7 @@ export default function Skills() {
                 <Grid container columnSpacing={{xs: 2}} paddingTop="15px">
                     {skills.map((prop) => {
                         return (
-                            <Grid key={prop.title} item xs={6} sm={3} md={2}>
+                            <Grid key={prop.title} item xs={6} sm={4} md={2}>
                                 <SkillCard image={prop.image} title={prop.title}/>
                             </Grid>
                         )
