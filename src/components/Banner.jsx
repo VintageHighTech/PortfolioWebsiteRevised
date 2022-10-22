@@ -21,12 +21,12 @@ export default function Banner() {
                     </Grid>
                     <Grid item xs={12} sm={6}>
                         <Typography variant="body1" marginTop="7%" marginBottom="5%">
-                            A highly motivated, self-taught software developer with a passion for technology.
-                            Focused on Java and backend development but also keen to broaden my
-                            understanding of frontend web applications. Currently studying data structures
-                            and algorithms using online services such as StackSkills, Udemy, LeetCode and
-                            others. Over seventeen years' experience in technical design roles in manufacturing
-                            & engineering industries.
+                            I am a highly motivated, self-taught software developer with a passion for technology.
+                            Java and backend development has been the main focus of my studies, but I also develop
+                            frontend web applications using ReactJS. I currently study all aspects of software
+                            development using online services such as StackSkills, Udemy, LeetCode, and others.
+                            I have over seventeen years of experience working in technical design roles in
+                            engineering industries.
                         </Typography>
                         <SocialIconGroup/>
                         <br/>
