@@ -19,7 +19,7 @@ export default function Projects() {
             active: true,
             linkButton: "WEBAPP",
             gitUrl: "https://github.com/VintageHighTech/Connect4FinalSession",
-            webUrl: "http://connect4singleback-env.eba-x63ic78n.eu-west-2.elasticbeanstalk.com/"
+            webUrl: "https://c4sessions-rvcmqmwxra-no.a.run.app/"
         },
         {
             title: "Portfolio Site",
